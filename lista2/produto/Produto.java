@@ -72,6 +72,23 @@ public class Produto {
         }
     }
 
+    //getters
+    public int getQtde() {
+        return this.qtde;
+    }
+
+    public float getPreco() {
+        return this.preco;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getDescricao() {
+        return this.descricao;
+    }
+
     // comprar
     public void comprar(int x) {
 

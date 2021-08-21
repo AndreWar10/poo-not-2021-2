@@ -17,6 +17,7 @@ public class TesteProduto {
 
         System.out.println(prod1.mostra());
         System.out.println(prod2.mostra());
+        System.out.println("Qtde " + prod2.getQtde() + "Descrição" + prod2.getDescricao());
 
         Produto prod3 = new Produto();
         prod3.setQtde(10);

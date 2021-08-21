@@ -22,6 +22,9 @@ public class Cliente {
     }
     public Cliente(String numeroConta, String numeroAgencia, float saldo, String nome){
         this.setNumeroConta(numeroConta);
+        this.setNumeroAgencia(numeroAgencia);
+        this.setSaldo(saldo);
+        this.setNome(nome);
     }
 
     public final void setNumeroConta(String numeroConta){
@@ -32,4 +35,66 @@ public class Cliente {
             System.out.println("Numero de conta inválido");
         }
     }
+
+    public final void setNumeroAgencia(String numeroAgencia){
+        if((numeroAgencia.length() == 6) && (numeroAgencia.charAt(4) == '-')){
+            this.numeroAgencia = numeroAgencia;
+        }
+        else {
+            System.out.println("Numero de Ageência inválido");
+        }
+    }
+
+    public final void setSaldo(float x){
+        if(x >= 0){
+            this.saldo = x;
+        }
+        else {
+            System.out.println("Saldo não pode ficar negativo");
+        }
+    }
+
+    public final void setNome(String nome) {
+        if (nome.length() <= 30) {
+            this.nome = nome;
+        }
+        else {
+            System.out.println("Nome excedeu o limite de caracteres");
+        }
+    }
+
+    //getters
+    public String getNumeroAgencia(){
+        return this.numeroAgencia;
+    }
+    public String getNumeroConta(){
+        return this.numeroConta;
+    }
+    public String getNome(){
+        return this.nome;
+    }
+    public float getSaldo(){
+        return this.saldo;
+    }
+
+    //dados cliente
+    public String toString(){
+        return "Numero da conta: " + this.numeroConta + "Numero da agencia: " + this.numeroAgencia + "Nome :" + this.nome + "Saldo: " + this.saldo;
+    }
+
+    //realizar deposito
+    public void realizarDeposito(float x){
+        this.setSaldo(this.saldo + x);
+        //this.saldo = this.saldo + x;
+    }
+
+    //realizar saque
+    public void realizarSaque(float x){
+        this.setSaldo(this.saldo -x);
+    }
+
+
+
 }
+
+
