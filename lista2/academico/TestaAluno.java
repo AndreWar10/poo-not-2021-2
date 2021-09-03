@@ -1,3 +1,4 @@
+
 package lista2.academico;
 import javax.swing.JOptionPane;
 public class TestaAluno {
@@ -17,6 +18,8 @@ public class TestaAluno {
         JOptionPane.showMessageDialog(null, obj1.toString());
 
     }
+
+    
 
 
     
